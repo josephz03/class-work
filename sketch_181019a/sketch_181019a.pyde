@@ -1,8 +1,3 @@
-# while loop to change values
-# convert to draw
-# move ellipse
-# reset ball
-# Make clouds move
 a = 0
 b = 0
 c = 0
@@ -16,11 +11,10 @@ def setup():
 
 def draw():
   ###  #background
+    global a, b, c, d
     background(225)
     noStroke()
-    global a, b, c, d
-    
-    
+
     if a >= 240:
         fill("#87CEEB")
         rect(0, 0, width, height)
@@ -34,7 +28,7 @@ def draw():
         b += 0
         if a >= 320:
             b += 0.3
-            if a > 660:
+            if a >= 720:
                 b = 0
     else:
         b += -0.3
@@ -42,22 +36,26 @@ def draw():
     ellipse(0+a, 200+b, 100, 100)
     
     
-  ###  #moon
-    if c >= 2000:
-        c = -40
+  #moon
+    if c >= 640:
+        c = -760
     c += 1
-    if c >= 560:
+    if c >= -440:
         d += 0
-        if c >= 640:
+        if c >= -400:
             d += 0.3
-            if c <= 640:
+            if c >= 0:
                 d = 0
-                if c >= 1280:
-                    d = 0
     else:
-        d += -0.3
+       d += - 0.3
     fill("#F0C420")
-    ellipse(-640+c, 200+d, 100, 100)
+    ellipse(720+c, 200+d, 100, 100)
+    
+    
+    #mountian
+    fill("#867e70")
+    triangle(500, height-300, 50, height-50, 1000, height-50)
+    
     
     #cloud
     global x
