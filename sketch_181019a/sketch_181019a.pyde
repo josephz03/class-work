@@ -34,13 +34,15 @@ def draw():
         b += 0
         if a >= 320:
             b += 0.3
+            if a > 660:
+                b = 0
     else:
         b += -0.3
     fill(253, 184, 19)
     ellipse(0+a, 200+b, 100, 100)
     
     
- ###   #moon
+  ###  #moon
     if c >= 2000:
         c = -40
     c += 1
@@ -48,6 +50,10 @@ def draw():
         d += 0
         if c >= 640:
             d += 0.3
+            if c <= 640:
+                d = 0
+                if c >= 1280:
+                    d = 0
     else:
         d += -0.3
     fill("#F0C420")
