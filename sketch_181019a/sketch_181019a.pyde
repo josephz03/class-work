@@ -5,6 +5,8 @@
 # Make clouds move
 a = 0
 b = 0
+c = 0
+d = 0
 x = 0
 
 
@@ -13,11 +15,19 @@ def setup():
 
 
 def draw():
-    background("#87CEEB")
+  ###  #background
+    background(225)
     noStroke()
+    global a, b, c, d
+    
+    
+    if a >= 240:
+        fill("#87CEEB")
+        rect(0, 0, width, height)
+
+    
     #sun
-    global a, b
-    if a >= 680:
+    if a >= 1360:
         a = -40
     a += 1
     if a >= 280:
@@ -27,7 +37,21 @@ def draw():
     else:
         b += -0.3
     fill(253, 184, 19)
-    ellipse(0+a, 200 + b, 100, 100)
+    ellipse(0+a, 200+b, 100, 100)
+    
+    
+ ###   #moon
+    if c >= 2000:
+        c = -40
+    c += 1
+    if c >= 560:
+        d += 0
+        if c >= 640:
+            d += 0.3
+    else:
+        d += -0.3
+    fill("#F0C420")
+    ellipse(-640+c, 200+d, 100, 100)
     
     #cloud
     global x
