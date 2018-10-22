@@ -43,7 +43,7 @@ def draw():
         fill(255, 159, 43)
         rect(0, 0, width, height)
     if a >= 620:
-        fill(193, 106, 0)
+        fill(213, 117, 0)
         rect(0, 0, width, height)
     #night
     if a >= 640:
