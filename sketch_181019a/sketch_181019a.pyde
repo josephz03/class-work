@@ -12,13 +12,44 @@ def setup():
 def draw():
   ###  #background
     global a, b, c, d
-    background(225)
+    background(255, 204, 170)
     noStroke()
-
-    if a >= 240:
+    #day
+    if a >= 100:
+        fill(255, 188, 106)
+        rect(0, 0, width, height)
+    if a >= 140:
+        fill(255, 239, 181)
+        rect(0, 0, width, height)
+    if a >= 160:
+        fill(203, 238, 244)
+        rect(0, 0, width, height)
+    if a >= 180:
         fill("#87CEEB")
         rect(0, 0, width, height)
-
+    if a >= 320:
+        fill(39, 135, 219)
+        rect(0, 0, width, height)
+    if a >= 400:
+        fill(203, 238, 244)
+        rect(0, 0, width, height)
+    if a >= 420:
+        fill(255, 239, 181)
+        rect(0, 0, width, height)
+    if a >= 440:
+        fill(255, 188, 106)
+        rect(0, 0, width, height)
+    #night
+    if a >= 680:
+        fill(0, 28, 58)
+        rect(0, 0, width, height)
+    if a >= 1200:
+        fill(55, 116, 140)
+        rect(0, 0, width, height)
+    if a >= 1350:
+        fill(141, 178, 181)
+        rect(0, 0, width, height)
+    
     
     #sun
     if a >= 1360:
@@ -48,10 +79,21 @@ def draw():
                 d = 0
     else:
        d += - 0.3
-    fill("#F0C420")
+    fill(240, 253, 255)
     ellipse(720+c, 200+d, 100, 100)
-    
-    
+    fill(255, 188, 106)
+    ellipse(735+c, 190+d, 96, 96)
+    if a >= 680:
+        fill(0, 28, 58)
+        ellipse(735+c, 190+d, 98, 98)
+    if a >= 1200:
+        fill(55, 116, 140)
+        ellipse(735+c, 190+d, 100, 100)
+    if a >= 1350:
+        fill(141, 178, 181)
+        ellipse(735+c, 190+d, 102, 102)
+        
+        
     #mountian
     fill("#867e70")
     triangle(500, height-300, 50, height-50, 1000, height-50)
@@ -70,6 +112,7 @@ def draw():
     ellipse(x+90, y, 50, 50)
     ellipse(x+30, y-30, 50, 50)
     ellipse(x+60, y-30, 50, 50)
+    
     
     # ground
     fill(0, 128, 0)
