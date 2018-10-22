@@ -125,7 +125,7 @@ def draw():
         
     #mountian
     fill("#867e70")
-    triangle(500, height-300, 50, height-50, 1000, height-50)
+    triangle(500, height-300, 50, height-80, 1000, height-80)
     
     
     #cloud
@@ -143,19 +143,38 @@ def draw():
     ellipse(x+60, y-30, 50, 50)
     
     
-    # ground
+    #ground
     fill(0, 128, 0)
-    rect(0, height-50, width, 50)
+    rect(0, height-80, width, 80)
 
-        
-    # tree
+    
+    #house
+    fill(223, 194, 179)
+    rect(width-180, height-120, 159, 100)
+    triangle(460, height-120, 619, height-120, 539, height-190)
+    quad(460, height-120, 460, height-20, 420, height-60, 420, height-160)
+    quad(420, height-160, 460, height-120, 540, height-190, 500, height-230)
+    stroke(0)
+    line(460, height-120, 460, height-20)
+    line(619, height-120, 619, height-20)
+    line(460, height-20, 619, height-20)
+    line(460, height-120, 539, height-190)
+    line(619, height-120, 539, height-190)
+    line(460, height-20, 420, height-60)
+    line(420, height-60, 420, height-160)
+    line(420, height-160, 460, height-120)
+    line(499, height-230, 420, height-160)
+    line(539, height-190, 499, height-230)
+    
+    #tree
+    noStroke()
     fill("#603E11")
-    rect(width/2, height-130, 15, 80)
+    rect(width/2, height-110, 15, 80)
     fill(0, 128, 0)
-    ellipse(width/2-20, height-150, 40, 40)
-    ellipse(width/2, height-130, 40, 40)
-    ellipse(width/2, height-170, 40, 40)
-    ellipse(width/2+20, height-130, 40, 40)
-    ellipse(width/2+40, height-150, 40, 40)
-    ellipse(width/2+20, height-170, 40, 40)
+    ellipse(width/2-20, height-130, 40, 40)
+    ellipse(width/2, height-110, 40, 40)
+    ellipse(width/2, height-150, 40, 40)
+    ellipse(width/2+20, height-110, 40, 40)
+    ellipse(width/2+40, height-130, 40, 40)
     ellipse(width/2+20, height-150, 40, 40)
+    ellipse(width/2+20, height-130, 40, 40)
