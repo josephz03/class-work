@@ -25,10 +25,10 @@ def draw():
         fill(203, 238, 244)
         rect(0, 0, width, height)
     if a >= 180:
-        fill("#87CEEB")
+        fill(135, 206, 235)
         rect(0, 0, width, height)
     if a >= 320:
-        fill(39, 135, 219)
+        fill(84, 184, 226)
         rect(0, 0, width, height)
     if a >= 400:
         fill(203, 238, 244)
@@ -39,9 +39,24 @@ def draw():
     if a >= 440:
         fill(255, 188, 106)
         rect(0, 0, width, height)
+    if a >= 500:
+        fill(255, 159, 43)
+        rect(0, 0, width, height)
+    if a >= 620:
+        fill(193, 106, 0)
+        rect(0, 0, width, height)
     #night
+    if a >= 640:
+        fill(0, 51, 106)
+        rect(0, 0, width, height)
+    if a >= 660:
+        fill(0, 40, 85)
+        rect(0, 0, width, height)
     if a >= 680:
         fill(0, 28, 58)
+        rect(0, 0, width, height)
+    if a >= 720:
+        fill(0, 19, 40)
         rect(0, 0, width, height)
     if a >= 1200:
         fill(55, 116, 140)
@@ -63,8 +78,16 @@ def draw():
                 b = 0
     else:
         b += -0.3
-    fill(253, 184, 19)
-    ellipse(0+a, 200+b, 100, 100)
+        
+    if a >= -40:
+         fill(254, 255, 189)
+         ellipse(0+a, 200+b, 100, 100)
+    if a >= 420:
+        fill(254, 207, 99)
+        ellipse(0+a, 200+b, 100, 100)
+    if a >= 440:
+        fill(253, 184, 19)
+        ellipse(0+a, 200+b, 100, 100)
     
     
   #moon
@@ -81,14 +104,20 @@ def draw():
        d += - 0.3
     fill(240, 253, 255)
     ellipse(720+c, 200+d, 100, 100)
-    fill(255, 188, 106)
+    fill(0, 51, 106)
     ellipse(735+c, 190+d, 96, 96)
+    if a >= 660:
+        fill(0, 40, 85)
+        ellipse(735+c, 190+d, 96, 96)
     if a >= 680:
         fill(0, 28, 58)
         ellipse(735+c, 190+d, 98, 98)
+    if a >= 720:
+        fill(0, 19, 40)
+        ellipse(735+c, 190+d, 100, 100)
     if a >= 1200:
         fill(55, 116, 140)
-        ellipse(735+c, 190+d, 100, 100)
+        ellipse(735+c, 190+d, 102, 102)
     if a >= 1350:
         fill(141, 178, 181)
         ellipse(735+c, 190+d, 102, 102)
