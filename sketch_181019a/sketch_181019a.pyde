@@ -269,6 +269,10 @@ def draw():
         fill(247, 177, 34)
         rect(513, height-106, 53, 53)
         quad(442, height-74, 442, height-122,  423, height-142, 423, height-94)
+    if a >= 850:
+        fill(150)
+        rect(513, height-106, 53, 53)
+        quad(442, height-74, 442, height-122,  423, height-142, 423, height-94)
     stroke(222)
     line(514, height-65, 565, height-65)
     line(514, height-93, 565, height-93)
