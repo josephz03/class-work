@@ -128,14 +128,14 @@ def draw():
         
     #mountian
     fill("#867e70")
-    triangle(500, height-300, 50, height-80, 1000, height-80)
+    triangle(450, height-330, 0, height-80, 1200, height-80)
     
     
     #cloud
     global u, v, w, x
     if u >= 1040:
         u = -480
-    u += 4
+    u += 5
     if v >= 890:
         v = -240
     v += 3
@@ -144,41 +144,78 @@ def draw():
     w += 2
     if x >= 540:
         x = -600
-    x += 5
-    fill(237)
+    x += 7
     y = height/6
-    ellipse(u-400, y+10, 90, 50)
-    ellipse(u-370, y+10, 90, 50)
-    ellipse(u-340, y+10, 90, 50)
-    ellipse(u-310, y+10, 90, 50)
-    ellipse(u-370, y-20, 90, 50)
-    ellipse(u-340, y-20, 90, 50)
-    ellipse(v-250, y-15, 100, 50)
-    ellipse(v-220, y-15, 100, 50)
-    ellipse(v-190, y-15, 100, 50)
-    ellipse(v-160, y-15, 100, 50)
-    ellipse(v-220, y-45, 100, 50)
-    ellipse(v-190, y-45, 100, 50)
-    ellipse(w, y, 80, 50)
-    ellipse(w+30, y, 80, 50)
-    ellipse(w+60, y, 80, 50)
-    ellipse(w+90, y, 80, 50)
-    ellipse(w+30, y-30, 80, 50)
-    ellipse(w+60, y-30, 80, 50)
-    ellipse(x+200, y-10, 120, 50)
-    ellipse(x+230, y-10, 120, 50)
-    ellipse(x+260, y-10, 120, 50)
-    ellipse(x+290, y-10, 120, 50)
-    ellipse(x+230, y-40, 120, 50)
-    ellipse(x+260, y-40, 120, 50)
+    if a >= -40:
+        fill(237)
+        ellipse(u-400, y+10, 90, 50)
+        ellipse(u-370, y+10, 90, 50)
+        ellipse(u-340, y+10, 90, 50)
+        ellipse(u-310, y+10, 90, 50)
+        ellipse(u-370, y-20, 90, 50)
+        ellipse(u-340, y-20, 90, 50)
+        fill(214)
+        ellipse(v-250, y-15, 100, 50)
+        ellipse(v-220, y-15, 100, 50)
+        ellipse(v-190, y-15, 100, 50)
+        ellipse(v-160, y-15, 100, 50)
+        ellipse(v-220, y-45, 100, 50)
+        ellipse(v-190, y-45, 100, 50)
+        fill(200)
+        ellipse(w, y, 80, 50)
+        ellipse(w+30, y, 80, 50)
+        ellipse(w+60, y, 80, 50)
+        ellipse(w+90, y, 80, 50)
+        ellipse(w+30, y-30, 80, 50)
+        ellipse(w+60, y-30, 80, 50)
+        fill(188)
+        ellipse(x+200, y-10, 120, 50)
+        ellipse(x+230, y-10, 120, 50)
+        ellipse(x+260, y-10, 120, 50)
+        ellipse(x+290, y-10, 120, 50)
+        ellipse(x+230, y-40, 120, 50)
+        ellipse(x+260, y-40, 120, 50)
+    if a >= 640:
+        fill(190, 190, 214)
+        ellipse(u-400, y+10, 90, 50)
+        ellipse(u-370, y+10, 90, 50)
+        ellipse(u-340, y+10, 90, 50)
+        ellipse(u-310, y+10, 90, 50)
+        ellipse(u-370, y-20, 90, 50)
+        ellipse(u-340, y-20, 90, 50)
+        fill(175, 175, 205)
+        ellipse(v-250, y-15, 100, 50)
+        ellipse(v-220, y-15, 100, 50)
+        ellipse(v-190, y-15, 100, 50)
+        ellipse(v-160, y-15, 100, 50)
+        ellipse(v-220, y-45, 100, 50)
+        ellipse(v-190, y-45, 100, 50)
+        fill(150, 150, 188)
+        ellipse(w, y, 80, 50)
+        ellipse(w+30, y, 80, 50)
+        ellipse(w+60, y, 80, 50)
+        ellipse(w+90, y, 80, 50)
+        ellipse(w+30, y-30, 80, 50)
+        ellipse(w+60, y-30, 80, 50)
+        fill(128, 128, 174)
+        ellipse(x+200, y-10, 120, 50)
+        ellipse(x+230, y-10, 120, 50)
+        ellipse(x+260, y-10, 120, 50)
+        ellipse(x+290, y-10, 120, 50)
+        ellipse(x+230, y-40, 120, 50)
+        ellipse(x+260, y-40, 120, 50)
     
     
     #ground
-    fill(0, 128, 0)
-    rect(0, height-80, width, 80)
-
+    if a >= -40:
+        fill("#559900")
+        rect(0, height-80, width, 80)
+    if a >= 640:
+        fill("608038")
+        rect(0, height-80, width, 80)
     
-    #house
+    
+    #house+frame
     fill(223, 194, 179)
     rect(width-180, height-120, 159, 100)
     triangle(460, height-120, 619, height-120, 539, height-190)
@@ -196,6 +233,16 @@ def draw():
     line(420, height-160, 460, height-120)
     line(499, height-230, 420, height-160)
     line(539, height-190, 499, height-230)
+    #front
+    line(460, height-30, 420, height-70)
+    line(460, height-40, 420, height-80)
+    line(460, height-50, 420, height-90)
+    line(460, height-60, 420, height-100)
+    line(460, height-70, 420, height-110)
+    line(460, height-80, 420, height-120)
+    line(460, height-90, 420, height-130)
+    line(460, height-100, 420, height-140)
+    line(460, height-110, 420, height-150)
     #side
     line(460, height-30, 619, height-30)
     line(460, height-40, 619, height-40)
@@ -213,17 +260,24 @@ def draw():
     line(505, height-160, 573, height-160)
     line(516, height-170, 561, height-170)
     line(527, height-180, 550, height-180)
+    #window+door
     if a >= -40:
         fill(200)
         rect(513, height-106, 53, 53)
+        quad(442, height-74, 442, height-122,  423, height-142, 423, height-94)
     if a >= 630:
         fill(247, 177, 34)
         rect(513, height-106, 53, 53)
+        quad(442, height-74, 442, height-122,  423, height-142, 423, height-94)
     stroke(222)
     line(514, height-65, 565, height-65)
     line(514, height-93, 565, height-93)
     line(526, height-54, 526, height-105)
     line(552, height-54, 552, height-105)
+    line(428, height-90, 428, height-134)
+    line(438, height-80, 438, height-124)
+    line(441, height-108, 424, height-128)
+    line(441, height-86, 424, height-106)
     stroke(255)
     line(514, height-79, 565, height-79)
     line(514, height-78, 565, height-78)
@@ -231,10 +285,26 @@ def draw():
     line(540, height-54, 540, height-105)
     line(539, height-54, 539, height-105)
     line(538, height-54, 538, height-105)
+    line(441, height-98, 424, height-118)
+    line(441, height-97, 424, height-117)
+    line(441, height-96, 424, height-116)
+    line(434, height-84, 434, height-128)
+    line(433, height-85, 433, height-129)
+    line(432, height-86, 432, height-130)
+    stroke(0)
+    fill(149, 132, 96)
+    quad(455, height-25, 455, height-82,  445, height-92, 445, height-35)
+    fill(0)
+    ellipse(453, height-53, 1, 1)
+    
+    
+    #path
+    noStroke()
+    fill(139,69,19)
+    triangle(455, height-24, 445, height-34, -400, height+40)
     
     
     #tree
-    noStroke()
     fill("#603E11")
     rect(width/2, height-110, 15, 80)
     fill(0, 128, 0)
