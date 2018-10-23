@@ -2,6 +2,9 @@ a = 0
 b = 0
 c = 0
 d = 0
+u = 0
+v = 0
+w = 0
 x = 0
 
 
@@ -129,18 +132,45 @@ def draw():
     
     
     #cloud
-    global x
-    if x >= 640:
-        x = 0
-    x += 3
+    global u, v, w, x
+    if u >= 1040:
+        u = -480
+    u += 4
+    if v >= 890:
+        v = -240
+    v += 3
+    if w >= 720:
+        w = -100
+    w += 2
+    if x >= 540:
+        x = -600
+    x += 5
     fill(237)
     y = height/6
-    ellipse(x, y, 50, 50)
-    ellipse(x+30, y, 50, 50)
-    ellipse(x+60, y, 50, 50)
-    ellipse(x+90, y, 50, 50)
-    ellipse(x+30, y-30, 50, 50)
-    ellipse(x+60, y-30, 50, 50)
+    ellipse(u-400, y+10, 90, 50)
+    ellipse(u-370, y+10, 90, 50)
+    ellipse(u-340, y+10, 90, 50)
+    ellipse(u-310, y+10, 90, 50)
+    ellipse(u-370, y-20, 90, 50)
+    ellipse(u-340, y-20, 90, 50)
+    ellipse(v-250, y-15, 100, 50)
+    ellipse(v-220, y-15, 100, 50)
+    ellipse(v-190, y-15, 100, 50)
+    ellipse(v-160, y-15, 100, 50)
+    ellipse(v-220, y-45, 100, 50)
+    ellipse(v-190, y-45, 100, 50)
+    ellipse(w, y, 80, 50)
+    ellipse(w+30, y, 80, 50)
+    ellipse(w+60, y, 80, 50)
+    ellipse(w+90, y, 80, 50)
+    ellipse(w+30, y-30, 80, 50)
+    ellipse(w+60, y-30, 80, 50)
+    ellipse(x+200, y-10, 120, 50)
+    ellipse(x+230, y-10, 120, 50)
+    ellipse(x+260, y-10, 120, 50)
+    ellipse(x+290, y-10, 120, 50)
+    ellipse(x+230, y-40, 120, 50)
+    ellipse(x+260, y-40, 120, 50)
     
     
     #ground
